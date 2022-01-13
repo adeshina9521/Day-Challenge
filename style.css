@@ -1,4 +1,4 @@
-/* INSTRUCTIONS
+/* INSTRUCTIONS DAY 1 CHALLENGE
  *
  * 1) Limit the total width of
  *    the .intro-conent to about half
@@ -10,7 +10,7 @@
  *
  * You may modify the HTML if needed
  *
- */
+ 
 
 * {
   box-sizing: border-box;
@@ -23,15 +23,60 @@ body {
 
 .container {
   background: #23424a;
-  color: red;
+  color: white;
 
   width: 80%;
+  padding: 2em;
   margin: 0 auto;
 
-  padding: 2em;
 }
 
 .intro-content{
   width: 50%;
+}
+*/
+
+/* INSTRUCTIONS DAY 2 CHALLENGE
+ *
+ * 1) Keep the text inside .intro-content
+ *    in the same place, but have the background
+ *    extend from one side of the viewport
+ *    to the other, no matter how wide or narrow
+ *    the browser is.
+ *
+ * 2) Limit the maximum width of the text in the
+ *    bottom area.
+ *
+ * You may modify the HTML if needed
+ * (you probably should for this challenge)
+ *
+ */
+
+ * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 80%;
+  max-width: 750px;
+  background: #23424a;
+  color: white;
   margin: 0 auto;
+}
+
+.intro-content {
+  width: 50%;
+  max-width: 500px;
+  padding: 2em;
+}
+.bottom{
+  width: 80%;
+  max-width: 8000px;
+  padding: 2em;
+
 }
