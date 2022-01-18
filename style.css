@@ -52,11 +52,12 @@ body {
  *
  */
 
+
  * {
   box-sizing: border-box;
 }
 
-body {
+/* body {
   margin: 0;
   font-family: sans-serif;
 }
@@ -79,4 +80,41 @@ body {
   max-width: 8000px;
   padding: 2em;
 
+} */
+
+.container{
+  background-color: #23424A;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 2em;
+  font-size: 1rem;
+  color: white;
+  width: 80%;
+  margin: 0 auto;
+}
+.cont{
+  padding: 2em;
+  width: 55%;
+}
+.cont p{
+  padding-bottom: 2em;
+}
+.btn{
+  color: black;
+  border: 1px solid rgb(78, 205, 209);
+  border-radius: 40px;
+  padding: .6em;
+  background-color: rgb(78, 205, 209);
+}
+.btn:hover{
+  padding: .5em;
+  
+}
+.cont a{
+  text-decoration: none;
+  font-weight: 700;
+  font-size: .7rem;
+  text-transform: uppercase;
+  
+
+  
 }
