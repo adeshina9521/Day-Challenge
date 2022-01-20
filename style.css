@@ -158,8 +158,25 @@ h1 {
     width: 80%;
     max-width: 1100px;
     margin: 0 auto;
-}
+    padding: 2em;
 
+}
+.hero_cont{
+  display: flex;
+  margin: 0 auto;
+  padding: 2em;
+  align-content: space-between;
+
+
+}
+.container img {
+  align-self: flex-start;
+  width: 45vw;
+  padding: 2em;
+  text-align: right;
+
+
+}
 .row {
     /* display: flex => flex container */
     display: flex;
@@ -168,12 +185,11 @@ h1 {
     /* gap: 100px; */
 
     background-color: tomato;
-    margin-top: 2em;
+    margin: 0 auto;
+    align-content: space-between;
+
 }
 .col2{
-  display: flex;
-  margin: 0 auto;
-  width: 80%;
   background-color: rgb(17, 16, 16);
   color: white;
   margin-top: 2em;
@@ -181,9 +197,16 @@ h1 {
 
 .col {
     /* these are now flex items */
-    width: 100%;
-    margin: 1.2em;
+    align-items: center;
 
+}
+.col h2{
+  text-align: center;
+  color: grey;
+}
+.col p {
+  padding: 1em;
+  text-align: center;
 }
 
 .hero {
@@ -193,7 +216,7 @@ h1 {
 }
 
 .hero__text {
-    width: 60%;
+    width: 50vw;
 }
 
 .hero p {
