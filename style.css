@@ -243,7 +243,6 @@ h1 {
 
   padding: 4em;
   margin: 0 auto;
-
   
 }
 .container-first-section{
@@ -253,14 +252,12 @@ h1 {
   padding: 2em;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  
+  align-items: center; 
   
 }
 
 .cont{
   text-align: center;
-  margin:  0 auto;
   font-size: 1rem;
 
 }
@@ -268,12 +265,44 @@ h1 {
   color: #824936;
 }
 .container-second-section{
-  padding: 0 8em;
   background-color: #fff;
 }
 
 .second-section-para{
   display: flex;
-  align-content: space-between;
-  align-items: flex-end;
+  justify-content: center;
+
+}
+.second-section-para p{
+  text-align: left;
+  width: 50%;
+  margin-right: 2em;
+}
+
+.container-three{
+  color: white;
+  background-color: #824936;
+  width: 80%;
+  margin: 0 auto;
+}
+.third-section-para{
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  
+}
+.custom{
+  margin:0 2em;
+  width: 50%;
+
+  align-items: flex-start;
+
+}
+.third-section-para img{
+  width: 50%;
+}
+.last-section{
+  background-color: #222c2a;
+
+
 }
