@@ -252,6 +252,7 @@ h1 {
   padding: 2em;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center; 
   
 }
@@ -273,10 +274,22 @@ h1 {
   justify-content: center;
 
 }
+@media (max-width: 700px) {
+  .second-section-para{
+    display: block;
+  }
+  
+}
 .second-section-para p{
   text-align: left;
   width: 50%;
   margin-right: 2em;
+}
+@media (max-width: 700px) {
+  .second-section-para p{
+     width: 100;
+  }
+  
 }
 
 .container-three{
