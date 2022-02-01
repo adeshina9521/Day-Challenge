@@ -89,5 +89,5 @@ let fruitList = "<ul>";
 
     document.getElementById("demo7").innerHTML= "the content of the array " + fruitList;
 
-// Add new element  to an Array
+
 
