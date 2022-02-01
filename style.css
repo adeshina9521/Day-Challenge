@@ -329,9 +329,7 @@ h1 {
   background-image: radial-gradient(rgb(217, 225, 216), rgb(52, 248, 13));
   z-index: 1000;
 
-
-  /* to see it in the real life */
-  transform: scale(60);
+  transition: transform 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 
@@ -346,6 +344,7 @@ h1 {
   right: 6rem;
   border-radius: 50%;
   z-index: 2000;
+  box-shadow: 0 1rem 3rem black;
 } 
 
 /* hide the check box */
@@ -359,6 +358,12 @@ h1 {
   top: 0;
   right: 0;
   z-index: 1500;
+
+/* so that it will not display on the page */
+  opacity: 0;
+  width: 0;
+
+  transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
 }
 
@@ -381,4 +386,21 @@ h1 {
 }
 .navigation__item{
   margin: 1rem;
+}
+
+.navigation__checkbox:checked ~ .navigation__background{
+  transform: scale(50);
+}
+
+.navigation__checkbox:checked ~ .navigation__nav{
+  opacity: 1;
+  width: 100%;
+}
+
+/* icon */
+.navigation__icon,
+.navigation__icon::before,
+.navigation__icon::after{
+   width: 3rem;
+   height: 2px;
 }
