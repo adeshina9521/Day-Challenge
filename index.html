@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <!-- navigation button -->
     <div class="navigation">
         <!-- this is for the check box -->
         <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
@@ -25,7 +26,7 @@
         <!-- HUGE CONTAINER SPANNONG THE ENTIRE PAG -->
         <nav class="navigation__nav">
             <ul class="navigation__list">
-                <li class="navigation__item"><a href="#" class="navigation__link">Home</a></li>
+                <li class="navigation__item"><a href="#popup__action" class="navigation__link">Home</a></li>
                 <li class="navigation__item"><a href="#" class="navigation__link">About</a></li>
                 <li class="navigation__item"><a href="#" class="navigation__link">Home</a></li>
                 <li class="navigation__item"><a href="#" class="navigation__link">Home</a></li>
@@ -34,6 +35,26 @@
             </ul>
         </nav>
     </div>
+
+    <!-- pop up -->
+    <div class="popup" id="popup">
+        <div class="popup__content">
+                <div class="popup__left">
+                    <img src="./img/image-01.jpg" alt="Popup Photo" class="popup__img">
+                    <img src="./img/image-02.jpg" alt="Popup Photo"class="popup__img">
+                </div>
+                <div class="popup__right">
+                    <a href="#home" class="popup__close">&times;</a>
+                    <h2 class="heading-secondary">Pop up heading</h2>
+                    <h3 class="heading-tertiary">Important &ndash; Please read these terms before popup</h3>
+                    <p class="popup__text">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis velit quaerat itaque repudiandae libero dolorum modi quasi rem fugit aliquam voluptates placeat, provident consequatur cum saepe sunt tenetur. Magnam, libero?
+                    </p>
+                    <a href="#" class="btn--green">Read now</a>
+                </div>
+        </div>
+    </div>
+
 
 
 
@@ -154,8 +175,12 @@
 
         <!-- Different Challenge -->
 
+<!-- this a is for the pup-up -->
+        <a href="#popup">Popup</a>  
 
-<div class="container container-first-section">
+        <a href="#home">Home</a>  
+
+<div class="container container-first-section" id="home">
     <div class="cont">
         <p>Lorem ipsum dolor sit.</p>
         <h1>Responsive layouts don’t
