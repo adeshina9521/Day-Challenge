@@ -147,3 +147,18 @@ document.getElementById("demo17").innerHTML= "the content of the array " + myChi
     //  The first parameter (0) defines the position where new elements should be added (spliced in).    // The second parameter (0) defines how many elements should be removed.
     // The second parameter (1) defines how many elements should be removed
 document.getElementById("demo18").innerHTML= "the content of the array " + myChild;
+
+// The slice() method slices out  a piece of an array into a new array.
+//This example slices out a part of an array starting from array element 1 ("Aishat"):
+myChild.slice(1);
+document.getElementById("demo19").innerHTML= "the content of the array " + myChild.slice(1);
+
+// Note
+// The slice() method creates a new array.
+// The slice() method does not remove any elements from the source array
+
+document.getElementById("demo20").innerHTML= "the content of the array " + myChild.slice(1, 4);
+        // This means that the slice should start from 1 and ends at 4
+
+
+// Finding Max and Min Values in an Array
