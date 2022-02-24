@@ -162,3 +162,114 @@ document.getElementById("demo20").innerHTML= "the content of the array " + myChi
 
 
 // Finding Max and Min Values in an Array
+
+// Arranging alphabetically in Array usind sort() in ascending order
+document.getElementById("demo21").innerHTML= "the content of the array " + myChild.sort();
+
+// Arrangement in descending order
+document.getElementById("demo22").innerHTML= "the content of the array " + myChild.reverse();
+
+// To sort Number in ascending order
+
+const point = [ 1, 4, 5, 7,32, 12, 11, 2, 34, 35, 55, 12, 3,2, 6,8]
+
+        // use this function to arrange the sort number in ascending order
+function ascending (a, b) {
+    return a - b
+}
+
+document.getElementById("demo23").innerHTML= "the content of the array " + point;
+
+document.getElementById("demo24").innerHTML= "the content of the array " + point.sort(ascending);
+
+    // for descending of number
+    document.getElementById("demo25").innerHTML= "the content of the array " + point.reverse(ascending);
+
+// for random arrangement
+document.getElementById("demo26").innerHTML= point
+
+
+function myFunction(){
+    
+    for (let i = point.length -1; i > 0; i--){
+        let j = Math.floor(Math.random() * i)
+        let k = point[i]
+        point[i] = point[j]
+        point[j] = k
+    }
+
+    document.getElementById("demo26").innerHTML= point;
+
+}
+
+// Maximum value in the array
+function myArrayMax(arr){
+    return Math.max.apply(null, arr);
+}
+document.getElementById("demo27").innerHTML= "the content of the array " + myArrayMax(point);
+
+// Minimum Value in the array
+function myArrayMin(arr){
+    return Math.min.apply(null, arr);
+}
+document.getElementById("demo28").innerHTML= "the content of the array " + myArrayMin(point);
+
+
+// To sort an Array that contains object 
+
+const myBaby =[
+    {middleNmae:"Adebayo", sex:"Male", year: 2020}, 
+    {middleNmae:"Ade", sex:"Male", year: 2010}, 
+    {middleNmae:"Morenikeji", sex:"Female", year: 2020}, 
+    {middleNmae:"Lawal", sex:"Male", year: 1996}
+];
+        // to sort using year
+
+displayMyBaby()
+myBaby.sort(function(a, b){
+   return a.year - b.year
+})
+displayMyBaby()
+
+function displayMyBaby(){
+    document.getElementById("demo29").innerHTML= "the content of the array " + myBaby[0].middleNmae + " " + myBaby[0].sex + myBaby[0].year + 
+                                                "<br>" +
+                                                myBaby[1].middleNmae + " " + myBaby[1].sex + myBaby[1].year +
+                                                "<br>" +
+                                                myBaby[2].middleNmae + " " + myBaby[2].sex + myBaby[2].year +
+                                                "<br>" +
+                                                myBaby[3].middleNmae + " " + myBaby[3].sex + myBaby[3].year
+                                                ;
+
+}
+
+        // to sort using middlename
+
+
+        displayMyBaby()
+
+        function myFunctionSort(){
+            myBaby.sort(function(a, b){
+                let x = a.middleNmae.toLowerCase();
+                let y = b.middleNmae.toLowerCase();
+                if  (x < y) {return -1;}
+                if (x > y) {return 1;} 
+                return 0;
+             });
+           
+             displayMyBaby()
+
+        }
+        
+        function displayMyBaby(){
+            document.getElementById("demo30").innerHTML= "the content of the array " + myBaby[0].middleNmae + " " + myBaby[0].sex + myBaby[0].year + 
+                                                        "<br>" +
+                                                        myBaby[1].middleNmae + " " + myBaby[1].sex + myBaby[1].year +
+                                                        "<br>" +
+                                                        myBaby[2].middleNmae + " " + myBaby[2].sex + myBaby[2].year +
+                                                        "<br>" +
+                                                        myBaby[3].middleNmae + " " + myBaby[3].sex + myBaby[3].year
+                                                        ;
+        
+        }
+        
