@@ -273,3 +273,244 @@ function displayMyBaby(){
         
         }
         
+    // Iteration
+//     It simply means looping over a sequence of elements.
+
+// Here are some easy examples:
+
+// Iterating over a String
+// Iterating over an Array
+
+// Arry iteration methods operate on every array item
+
+// 1.The forEach() method calls a function (a callback function) once for each array element.
+
+const number = [45, 4, 9, 16, 25];
+
+let txt = "";
+
+function myFunction(value, index, array){
+    txt += value + "<br>" ;
+ }
+ number.forEach(myFunction)
+
+ document.getElementById("demo31").innerHTML = "the ForEach of the Array " + txt;
+
+//  2. JavaScript Array map()
+//  The map() method creates a new array by performing a function on each array element.
+ 
+//  The map() method does not execute the function for array elements without values.
+ 
+//  The map() method does not change the original array.
+
+const number1 = [45, 4, 9, 16, 25];
+function myFunction1(value, index, array){
+    return value * 2
+}
+let newValue = number1.map(myFunction1)
+
+document.getElementById("demo32").innerHTML = "the Map of the Array " + newValue;
+
+
+// Note that the function takes 3 arguments:
+
+// The item value
+// The item index
+// The array itself
+// When a callback function uses only the value parameter, the index and array parameters can be omitted:
+const number2 = [45, 4, 9, 16, 25];
+
+function myFunction2(value){
+    return value * 3
+}
+let newValue2 = number2.map(myFunction2)
+
+document.getElementById("demo33").innerHTML = "the Map of the Array " + newValue2;
+
+
+// 3. JavaScript Array filter()
+// The filter() method creates a new array with array elements that passes a test.
+
+// This example creates a new array from elements with a value larger than 18:
+
+const number3 = [45, 4, 9, 16, 25];
+
+function myFunction3(value, index, array){
+    return value > 18
+}
+let filterValue = number3.filter(myFunction3)
+
+document.getElementById("demo34").innerHTML = "the Fiter of the Array " + filterValue;
+
+//  4.  JavaScript Array reduce()
+// The reduce() method runs a function on each array element to produce (reduce it to) a single value.
+
+// The reduce() method works from left-to-right in the array. See also reduceRight().
+
+// The reduce() method does not reduce the original array.
+
+// This example finds the sum of all numbers in an array:
+
+const number4 = [45, 4, 9, 16, 25];
+
+function myFunction4(total, value, index, array){
+    return total + value
+}
+// since the index and array are not used we can only use total and value
+let reduceValue = number4.reduce(myFunction4)
+// reduceValue or sum
+
+document.getElementById("demo35").innerHTML = "the Reduce of the Array " + reduceValue;
+
+    // The reduce() method can accept an initial value:
+
+    const number5 = [45, 4, 9, 16, 25];
+
+    function myFunction5(total, value, index, array){
+        return total + value
+    }
+    // since the index and array are not used we can only use total and value
+    let reduceValue1 = number5.reduce(myFunction5, 89)
+    // the initial value is 89 instead of 0
+    
+    document.getElementById("demo36").innerHTML = "the Reduce of initial value of 89 in the Array is " + reduceValue1;
+    
+    // 4. JavaScript Array reduceRight()
+    // The reduceRight() method runs a function on each array element to produce (reduce it to) a single value.
+    
+    // The reduceRight() works from right-to-left in the array. See also reduce().
+    
+    // The reduceRight() method does not reduce the original array.
+    
+    // This example finds the sum of all numbers in an array:
+
+    const number6 = [45, 4, 9, 16, 25];
+
+    function myFunction6(total, value, index, array){
+        return total + value
+    }
+        // since the index and array are not used we can only use total and value
+
+    let reduceValue2 = number6.reduceRight(myFunction6)
+
+    
+    document.getElementById("demo37").innerHTML = "the ReduceRight of the Array is " + reduceValue2;
+
+
+// 5. JavaScript Array every()
+  // The every() method check if all array values pass a test.
+    
+  // This example check if all array values are larger than 18:
+
+  const number7 = [45, 4, 9, 16, 25];
+
+  function myFunction7(value, index, array){
+      return value > 18
+    //   is all over 18?
+  }
+      // since the index and array are not used we can only use value
+
+  let allOver18 = number7.every(myFunction7)
+
+
+  
+  document.getElementById("demo38").innerHTML = "Did Every Element of the Array over 18" + allOver18;
+
+
+
+//  6. JavaScript Array some()
+//   The some() method check if some array values pass a test.
+  
+//   This example check if some array values are larger than 18:
+
+const number8 = [45, 4, 9, 16, 25];
+
+function myFunction8(value, index, array){
+    return value > 18
+  //   is some over 18?
+}
+    // since the index and array are not used we can only use value
+
+let someOver18 = number8.some(myFunction8)
+
+
+
+document.getElementById("demo39").innerHTML = "Did some of the Array over 18 " + someOver18;
+
+// 7. JavaScript Array indexOf()
+// The indexOf() method searches an array for an element value and returns its position.
+const fruits = ["Apple", "Orange", "mango", "Apple"]
+
+let position = fruits.indexOf("Apple") + 1;
+// Note: The first item has position 0, the second item has position 1, and so on thats why we add 1.
+
+document.getElementById("demo40").innerHTML = "Apple is found in position " + position;
+// If the item is present more than once, it returns the position of the first occurrence.
+
+// Syntax
+// array.indexOf(item, start)
+// item	Required. The item to search for.
+// start	Optional. Where to start the search. Negative values will start at the given position counting from the end, and search to the end.
+// Array.indexOf() returns -1 if the item is not found.
+
+// 8.  JavaScript Array lastIndexOf()
+// Array.lastIndexOf() is the same as Array.indexOf(), but returns the position of the last occurrence of the specified element.
+
+const fruits1 = ["Apple", "Orange", "Apple", "mango"]
+
+let position1 = fruits1.lastIndexOf("Apple") + 1;
+document.getElementById("demo41").innerHTML = "Apple is found in position " + position1;
+
+// 9.  JavaScript Array find()
+// The find() method returns the value of the first array element that passes a test function.
+
+// This example finds (returns the value of) the first element that is larger than 18:
+
+const number9 = [4, 9, 16, 25, 29]
+
+function myFunction9(value, index, array){
+
+    // since the index and array are not used we can only use value
+
+    return value > 18
+}
+
+let firstGreaterThan18 = number9.find(myFunction9);
+
+document.getElementById("demo42").innerHTML = "the first Array greater than 18 is " + firstGreaterThan18;
+
+//10 JavaScript Array findIndex()
+// The findIndex() method returns the index of the first array element that passes a test function.
+
+// This example finds the index of the first element that is larger than 18:
+const number10 = [4, 9, 16, 25, 29]
+
+function myFunction10(value, index, array){
+
+    // since the index and array are not used we can only use value
+
+    return value > 18
+}
+
+let firstIndexThatPass = number10.findIndex(myFunction10);
+
+document.getElementById("demo43").innerHTML = "the first Array that pass is " + firstIndexThatPass;
+
+// 11. JavaScript Array.from()
+// The Array.from() method returns an Array object from any object with a length property or any iterable object.
+
+const myArr = Array.from("ABCDEFG");
+document.getElementById("demo44").innerHTML ="Array object from any object with a length property or any iterable object." + myArr;
+
+// 12.JavaScript Array Keys()
+// The Array.keys() method returns an Array Iterator object with the keys of an array.
+
+const myFruit = ["Banana", "Orange", "Apple", "Mango"];
+let text = "";
+const keys = myFruit.keys();
+
+for (let x of keys){
+    text += x + "<br>"
+}
+
+document.getElementById("demo45").innerHTML ="The Array.keys() method returns an Array Iterator object with the keys of the array." + text;
