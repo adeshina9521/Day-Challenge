@@ -514,3 +514,20 @@ for (let x of keys){
 }
 
 document.getElementById("demo45").innerHTML ="The Array.keys() method returns an Array Iterator object with the keys of the array." + text;
+
+
+// 13. Array entries()
+//  this is to show the iterator and the string/value
+// Example
+// Create an Array Iterator, and then iterate over the key/value pairs:
+// The entries() method does not change the original array.
+
+const frt = ["Banana", "Orange", "Apple", "Mango"];
+const f = frt.entries();
+for (let x of f) {
+    document.getElementById("demo46").innerHTML += x + "<br>"
+}
+
+// ECMAScript 2016 introduced Array.includes() to arrays. This allows us to check if an element is present in an array (including NaN, unlike indexOf).
+const frt1 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo47").innerHTML = frt1.includes("Mango");
